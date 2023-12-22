@@ -1,0 +1,115 @@
+.work_box {
+    padding: 6rem 3rem;
+}
+
+.work_box:after {
+    transform: translate(-50%, -50%) rotate(1deg);
+}
+
+.work_item {
+    display: flex;
+    gap: 4%;
+    margin-bottom: 128px;
+}
+
+.work_thumbnail {
+    width: 48%;
+}
+
+.thumbnail_pc {
+    height: 260px;
+    width: 80%;
+}
+
+.thumbnail_sp {
+    border-radius: 10px;
+    height: 200px;
+    margin-left: 5%;
+    width: 15%;
+}
+
+.thumbnail_pc, .thumbnail_sp {
+    box-sizing: border-box;
+    border: 2px solid #222222;
+    box-shadow: 5px 5px 5px rgba(34, 34, 34, 0.66);
+    overflow-y: scroll;
+    display: inline-block;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.thumbnail_pc::-webkit-scrollbar,
+.thumbnail_sp::-webkit-scrollbar {
+    display: none;
+}
+
+
+.thumbnail_sp img, .thumbnail_pc img {
+    width: 100%;
+}
+
+.work_thumbnail p {
+    text-align: right;
+}
+
+.work_thumbnail p img {
+    height: 32px;
+    padding: 16px 8px;
+    filter: grayscale(1);
+}
+
+.work_thumbnail a {
+    display: block;
+    text-align: center;
+    padding: 32px 0;
+}
+
+.work_thumbnail a span {
+    padding: 16px 96px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-image: url("../asset/wallpaper2.jpg");
+    background-attachment: fixed;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 10px 5px 5px rgba(34, 34, 34, 0.66);
+}
+
+
+.work_detail {
+    width: 50%;
+}
+
+.work_detail h3 {
+    margin: 48px 0 8px;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: 'Vollkorn', serif;
+}
+
+.h3_right h3, .h3_right h4 {
+    text-align: right;
+}
+
+.work_detail h4 {
+    margin: 8px 0 24px;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #797979;
+}
+
+.work_detail h4 u {
+    color: #dc143c;
+}
+
+.work_detail p {
+    display: inline-block;
+    width: 45%;
+    margin-right: 5%;
+    vertical-align: top;
+    font-size: 1.1rem;
+}
+
+.work_detail a {
+    color: white;
+}

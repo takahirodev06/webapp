@@ -1,0 +1,23 @@
+.App {
+    position: relative;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh;
+}
+
+@keyframes app-bg-anime {
+    0% {
+        filter: hue-rotate(360deg);
+        background-position: left center;
+    }
+    100% {
+        filter: hue-rotate(0deg);
+        background-position: left center;
+    }
+
+}
+
+
+

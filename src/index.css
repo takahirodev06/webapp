@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Kaushan+Script&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Kaushan+Script&family=Parisienne&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Shippori+Mincho+B1&family=Yuji+Mai&family=Zen+Antique&display=swap');
+
+/*--- Reset css ------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background: rgb(65, 65, 65);
+    background: radial-gradient(circle, rgb(65, 65, 65) 0%, rgb(34, 34, 34) 100%);
+    color: #ffffff;
+
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*--- position ------------------------------------------------------------------------------*/
+.gridcenter {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.absolutecenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.invisible {
+    display: none;
+}
+
+/*--- text ------------------------------------------------------------------------------*/
+.Basic {
+    font-family: 'Basic', sans-serif;
+}
+
+.Gruppo {
+    font-family: 'Gruppo', sans-serif;
+}
+
+.Vollkorn {
+    font-family: 'Vollkorn', serif;
+}
+
+.Allura {
+    font-family: 'Allura', cursive;
+}
+
+.Kaushan {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.Parisienne {
+    font-family: 'Parisienne', cursive;
+}
+
+.Yuji {
+    font-family: 'Yuji Mai', serif;
+}
+
+.ZenAntique {
+    font-family: 'Zen Antique', serif;
+}
+
+.ZenDots {
+    font-family: 'Zen Dots', sans-serif;
+}
+
+.Shippori {
+    font-family: 'Shippori Mincho', serif;
+}
+
+
+/*--- sub pages------------------------------------------------------------------------------*/
+.top_container {
+
+}
+
+.sub_container {
+    padding: 8rem 12% 4rem;
+    animation: fade_in_right 0.4s forwards;
+}
+
+@keyframes fade_in_right {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fade_in_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.sub_container h2 {
+    font-size: 4rem;
+    line-height: 130%;
+    color: #222;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff,
+    -1px 0 0 #fff, 1px 0 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff;
+    margin-bottom: 2rem;
+}
+
+.contact_btn {
+    margin: 8rem 0 4rem;
+    text-align: center;
+    rotate: -6deg;
+}
+
+.contact_btn a, .contact_btn a span {
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    color: #ffffff;
+
+}
+
+.contact_btn a span {
+    font-weight: normal;
+    font-size: 10rem;
+}
+
+
+.fluidcircle {
+    position: absolute;
+    right: 15%;
+    bottom: 15%;
+    height: 50%;
+    width: 300px;
+    animation: fluidrotate 5s infinite;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 30px #ffffff, inset 0 0 30px #ffffff;
+    z-index: -1;
+}
+
+@keyframes fluidrotate {
+
+    0%, 100% {
+        rotate: 0;
+        border-radius: 63% 22% 54% 46%/55% 48% 52% 45%;
+    }
+    14% {
+        border-radius: 40% 60% 54% 35%/49% 60% 40% 51%;
+    }
+    28% {
+        border-radius: 54% 46% 38% 77%/49% 70% 30% 51%;
+    }
+    42% {
+        rotate: 127deg;
+
+        border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+    }
+    56% {
+        border-radius: 61% 39% 74% 18%/70% 50% 50% 30%;
+    }
+    70% {
+        border-radius: 50% 40% 34% 66%/56% 68% 32% 44%;
+    }
+    84% {
+        border-radius: 34% 54% 50% 50%/35% 61% 39% 65%;
+    }
+
+}
+
+.notfound {
+    height: 100vh;
+    text-align: center;
+}
+
+.notfound h1 {
+    font-size: 3rem;
+    font-family: 'Zen Dots', sans-serif;
+    font-weight: normal;
+}
+
+.notfound p {
+    font-family: 'Zen Dots', sans-serif;
+    margin-top: 24px;
+}
+
+.notfound p span {
+    font-family: 'Shippori Mincho', serif;
+}
+
+.notfound a {
+    margin: 32px auto;
+    padding: 0.5rem 2rem;
+    max-width: 500px;
+    font-size: 3rem;
+    font-weight: normal;
+    border-bottom: 1px solid #ffffff;
+}
+
+.notfound h1:hover, .notfound p:hover ,.notfound a:hover {
+    color: #4dff50;
+}
+
+.notfound a:hover {
+    border-bottom: 1px solid #4dff50;
+}
+
+/*--- ------------------------------------------------------------------------------*/
+
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pc {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+    .sub_container {
+        background-color: #658550;
+        padding: 8rem 12% 4rem 14%;
+        animation: fade_in 0.4s forwards;
+    }
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+    .sub_container {
+        background-color: #9a707c;
+        padding: 8rem 8px 4rem;
+        animation: fade_in 0.4s forwards;
+    }
+}
+
+/*--- ------------------------------------------------------------------------------*/

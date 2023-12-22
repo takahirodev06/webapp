@@ -1,0 +1,90 @@
+.about_box {
+    padding: 0;
+    position: relative;
+    display: flex;
+}
+
+.about_photo, .about_txt {
+
+}
+
+.about_photo {
+    text-align: center;
+    width: 40%;
+}
+
+.about_photo img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.about_txt {
+    padding: 0 48px;
+    width: 60%;
+}
+
+.about_txt h3 {
+    font-size: 2.5rem;
+    line-height: 120%;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+}
+
+.about_txt h3 .about_txtjp {
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: 'Yuji Mai', serif;
+}
+
+.about_txt h4 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 36px;
+}
+
+.about_txt p {
+    font-size: 1.2rem;
+    line-height: 105%;
+}
+
+.about_txt div {
+    display: inline-block;
+    margin-right: 5%;
+    width: 45%;
+    vertical-align: top;
+}
+
+.about_txten {
+}
+
+
+.about_page .contact_btn {
+    margin: 64px 0;
+}
+
+.about_page .contact_btn a,
+.about_page .contact_btn a span {
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.about_page .contact_btn a span {
+    font-weight: normal;
+    font-size: 10rem;
+}
+
+.about_sns {
+    margin: 0 0 24px;
+}
+
+.about_sns span img {
+
+}
+
+.about_sns img {
+    height: 48px;
+    padding: 16px 8px;
+    filter: grayscale(1) brightness(1);
+}

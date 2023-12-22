@@ -1,0 +1,33 @@
+.sidebar_container {
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+}
+
+.sidebar_container ul {
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar_container img {
+    height: 40px;
+    padding: 0.5rem;
+    filter: grayscale(1) brightness(1);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.sidebar_container span img {
+    height: 40px;
+    filter: grayscale(1) brightness(1) invert(0.2);
+    transition: 0.4s;
+}
+
+.sidebar_container img:hover {
+    height: 64px;
+    filter: grayscale(0) brightness(1);
+}
