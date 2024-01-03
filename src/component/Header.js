@@ -18,13 +18,19 @@ function Header(props) {
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
-            <div className="header_lang"><Link to="/">fr</Link> /<Link to="/"> en</Link> /<Link to="/"> jp</Link></div>
-            <input id="checkbox_toggle" type="checkbox" className="check"/>
-            <label className="slide" htmlFor="checkbox_toggle">
-                <label className="toggle" htmlFor="checkbox_toggle"></label>
-                <label className="text" htmlFor="checkbox_toggle">Light</label>
-                <label className="text" htmlFor="checkbox_toggle">Dark</label>
-            </label>
+            <div className="header_lang">
+                <Link rel={"alternate"} to="/">fr</Link> /
+                <Link rel={"alternate"} to="/">en</Link> /
+                <Link rel={"alternate"} to="/">jp</Link>
+            </div>
+            <div className="header_dark">
+                <input id="header_dark_toggle" type="checkbox" className="check"/>
+                <label className="slide" htmlFor="header_dark_toggle">
+                    <label className="toggle" htmlFor="checkbox_toggle"></label>
+                    <label className="text" htmlFor="checkbox_toggle">Light</label>
+                    <label className="text" htmlFor="checkbox_toggle">Dark</label>
+                </label>
+            </div>
         </header>
     );
 }

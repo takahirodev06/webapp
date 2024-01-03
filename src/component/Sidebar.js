@@ -1,11 +1,13 @@
 import "../style/Sidebar.css"
-import {useEffect, useState} from "react";
-import sns06 from "../asset/TX.png";
-import sns04 from "../asset/IS.png";
-import sns05 from "../asset/linkdin.webp";
+import React, {useEffect, useState} from "react";
+
 import sns01 from "../asset/GH3.png";
 import sns02 from "../asset/GL.png";
 import sns03 from "../asset/GM.png";
+import sns04 from "../asset/IS.png";
+import sns05 from "../asset/linkdin.webp";
+import sns06 from "../asset/TX.png";
+
 
 function Helmet(props) {
     return null;
@@ -31,16 +33,23 @@ function Sidebar(props) {
 
 
     return (
-        <div  className={"sidebar_container"}>
+        <div className={"sidebar_container"}>
             <ul>
-                <li><a href="#" target={"_blank"}><span><img src={sns01} alt="sns"/></span></a></li>
-                <li><a href="#" target={"_blank"}><img src={sns02} alt="sns"/></a></li>
-                <li><a href="#" target={"_blank"}><span><img src={sns06} alt="sns"/></span></a></li>
-                <li><a href="#" target={"_blank"}><img src={sns04} alt="sns"/></a></li>
-                <li><a href="#" target={"_blank"}><img src={sns05} alt="sns"/></a></li>
-                <li><a href="#" target={"_blank"}><img src={sns03} alt="sns"/></a></li>
+                <li><a href="https://github.com/takahirodev06" target={"_blank"}>
+                    <span><img src={sns01} alt="github"/></span>
+                </a></li>
+                <li><a href="https://gitlab.com/Takahi" target={"_blank"}>
+                    <img src={sns02} alt="gitlab"/> </a></li>
+                <li><a href="https://twitter.com/mr_increment" target={"_blank"}>
+                    <span><img src={sns06} alt="x"/></span>
+                </a></li>
+                <li><a href="https://www.instagram.com/" target={"_blank"}>
+                    <img src={sns04} alt="instagram"/></a></li>
+                <li><a href="https://www.linkedin.com/in/takahiro-y-551a1918b/" target={"_blank"}>
+                    <img src={sns05} alt="Linkd in"/> </a></li>
+                <li><a href="mailto:takahirodev06@gmail.com">
+                    <img src={sns03} alt="gmail"/> </a></li>
             </ul>
-
         </div>
     );
 }

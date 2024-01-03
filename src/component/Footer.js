@@ -10,17 +10,17 @@ function Footer(props) {
     return (
         <footer className="footer Basic">
             <p>Copyright © 2023 YAMADA TAKAHIRO WEB CREATION</p>
-            <div className="">
-                <h2 className="font">No set © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="Basic">Basic © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="Gruppo">Gruppo © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="Vollkorn">Vollkorn © 2023 YAMADA TAKaushanKAHIRO WEB C 隆広</h2>
-                <h2 className="Allura">Allura © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="Kaushan">Kaushan © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="Parisienne">Parisienne © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="Yuji">Yuji © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="ZenAntique">ZenAntique © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
-                <h2 className="ZenDots">ZenDots © 2023 YAMADA TAKAHIRO WEB C 隆広</h2>
+            <div className="hideall">
+                <p className="">No set © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="Basic">Basic © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="Gruppo">Gruppo © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="Vollkorn">Vollkorn © 2023 YAMADA TAKaushanKAHIRO WEB C 隆広</p>
+                <p className="Allura">Allura © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="Kaushan">Kaushan © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="Parisienne">Parisienne © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="Yuji">Yuji © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="ZenAntique">ZenAntique © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
+                <p className="ZenDots">ZenDots © 2023 YAMADA TAKAHIRO WEB C 隆広</p>
             </div>
         </footer>
     );

@@ -23,7 +23,6 @@
     font-size: 3rem;
     position: relative;
     font-family: 'Gruppo', sans-serif;
-
 }
 
 .contact_address h3 img {
@@ -50,18 +49,7 @@
 }
 
 .contact_address .filtegreen {
-    transform-origin: center center;
     filter: invert(56%) sepia(100%) saturate(494%) hue-rotate(87deg) brightness(97%) contrast(95%);
-    animation: rotate01 0.5s forwards;
-}
-
-@keyframes rotate01 {
-    0% {
-        transform: scale(0.1) translateY(-50%);
-    }
-    100% {
-        transform: scale(1) translateY(-50%);
-    }
 }
 
 .contact_form {
@@ -85,9 +73,23 @@
     transform: translateX(calc(-50% - 6rem));
 }
 
+.form_is_send p,
+.form_is_send div {
+    display: none;
+}
+
+.form_send_message p,
+.form_send_message div {
+    display: block
+}
+
 
 .form_is_send p {
     margin: 6rem 0;
+    font-size: 2rem;
+}
+
+.form_is_send a {
     font-size: 2rem;
 }
 
@@ -111,6 +113,8 @@
     font-size: 1.2rem;
     font-family: 'Gruppo', sans-serif;
     flex-grow: 1;
+    color: #0a1929;
+    font-weight: bold;
 }
 
 .form_field_item textarea {
@@ -120,7 +124,8 @@
 .form_field_item input::placeholder,
 .form_field_item textarea::placeholder {
     font-family: 'Gruppo', sans-serif;
-    color: #000000;
+    color: rgba(0, 0, 0, 1);
+    font-weight: normal;
 }
 
 .form_field_lamp {
@@ -159,52 +164,32 @@
 }
 
 .form_switch {
+    text-align: center;
     margin: 1rem 0 1.5rem;
-
 }
 
 .form_switch button,
 .form_switch a {
     position: relative;
-    padding: 1rem 0;
+    margin: 0 auto;
+    padding: 1rem 9rem;
     font-size: 1.4rem;
     border-radius: 1rem;
     border: none;
     text-align: center;
-    display: block;
-    width: 100%;
     color: white;
-    opacity: 0.7;
-    background: linear-gradient(
-            45deg,
-            rgba(255, 0, 0, 1) 0%,
-            rgba(255, 154, 0, 1) 10%,
-            rgba(208, 222, 33, 1) 20%,
-            rgba(79, 220, 74, 1) 30%,
-            rgba(63, 218, 216, 1) 40%,
-            rgba(47, 201, 226, 1) 50%,
-            rgba(28, 127, 238, 1) 60%,
-            rgba(95, 21, 242, 1) 70%,
-            rgba(186, 12, 248, 1) 80%,
-            rgba(251, 7, 217, 1) 90%,
-            rgba(255, 0, 0, 1) 100%
-    );
-    animation: app-bg-anime 2s infinite;
+    text-shadow: 0 0 30px #022c8c, 0 0 15px #022c8c, 0 0 5px #022c8c;
+    font-weight: bold;
+    opacity: 1;
+    background-image: url("../asset/wallpaper30.jpg");
+    background-size: cover;
+    animation: app-bg-anime 3s infinite;
 }
 
 .form_switch button:disabled {
-    background: linear-gradient(
-            45deg,
-            rgb(218, 218, 218) 0%,
-            rgb(183, 183, 183) 20%,
-            rgb(143, 143, 143) 30%,
-            rgb(122, 122, 122) 40%,
-            rgb(58, 58, 58) 60%,
-            rgb(93, 93, 93) 70%,
-            rgb(105, 105, 105) 90%,
-            rgb(208, 208, 208) 100%
-    );
-
+    text-shadow: 0 0 30px #000000, 0 0 15px #000000, 0 0 5px #000000;
+    filter: grayscale(1);
+    animation: unset;
 }
 
 
@@ -258,5 +243,175 @@
 }
 
 .fade_out_s {
+
+}
+
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pc {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px)and (min-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+    .contact_address, .contact_form {
+        overflow-x: hidden;
+        margin: 0 0 4rem;
+        padding: 2rem 3rem;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        background: #212121;
+        box-shadow: 15px 15px 30px rgb(25, 25, 25),
+        -15px -15px 30px rgb(45, 45, 45);
+        color: white;
+    }
+
+
+    .contact_address p, .contact_form p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Gruppo', sans-serif;
+    }
+
+    .contact_address h3 {
+        padding-right: 40px;
+        margin-right: 25px;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .form_field_lamp {
+        width: 25px;
+        padding-left: 10px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .form_field_lamp div {
+        width: 15px;
+        height: 15px;
+        margin: 1rem 0 1.5rem;
+        border-radius: 50%;
+    }
+
+    .form_is_send p {
+        margin: 4rem 0 6rem;
+        font-size: 2rem;
+    }
+
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+    .contact_address, .contact_form {
+        overflow-x: hidden;
+        margin: 0 0 4rem;
+        padding: 2rem 1rem;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        background: #212121;
+        box-shadow: 15px 15px 30px rgb(25, 25, 25),
+        -15px -15px 30px rgb(45, 45, 45);
+        color: white;
+    }
+
+
+    .contact_address p, .contact_form p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Gruppo', sans-serif;
+    }
+
+    .contact_address h3 {
+        margin: 2rem 0 4.5rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .contact_address h3 img {
+        position: absolute;
+        top: 3.8rem;
+        right: 50%;
+        transform: translateX(50%);
+        height: 50px;
+    }
+
+    .contact_address h3 span {
+        position: absolute;
+        top: 4.8rem;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100px;
+        text-align: center;
+        font-size: 1rem;
+        cursor: default;
+    }
+
+
+    .form_field_lamp {
+        width: 25px;
+        padding-left: 10px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .form_field_lamp div {
+        width: 15px;
+        height: 15px;
+        margin: 1rem 0 1.5rem;
+        border-radius: 50%;
+    }
+
+    .form_is_send p {
+        margin: 2rem 0 6rem;
+        font-size: 2rem;
+    }
+
+    .form_switch button,
+    .form_switch a {
+        padding: 1rem 6rem;
+
+    }
 
 }

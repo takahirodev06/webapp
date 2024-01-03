@@ -1,11 +1,11 @@
 import "../style/Works.css"
 import {useEffect} from "react";
-import work2 from "../asset/0021.png";
-import work3 from "../asset/0023.png";
-import work4 from "../asset/0031.png";
-import work5 from "../asset/0032.png";
-import work6 from "../asset/0041.png";
-import work7 from "../asset/0042.png";
+import work2 from "../asset/0021.webp";
+import work3 from "../asset/0023.webp";
+import work4 from "../asset/0031.webp";
+import work5 from "../asset/0032.webp";
+import work6 from "../asset/0041.webp";
+import work7 from "../asset/0042.webp";
 
 import css3 from "../asset/css3.svg";
 import html5 from "../asset/html5.svg";
@@ -14,7 +14,7 @@ import Ts from "../asset/Ts.png";
 import nodejs from "../asset/nodejs.svg";
 import firebase from "../asset/firebase.png";
 import react from "../asset/React-icon.svg.png";
-import angularjs from "../asset/angularjs (1).png";
+import angularjs from "../asset/icon angularjs.png";
 
 
 import wp from "../asset/wordpress.png";
@@ -65,7 +65,15 @@ function Works(props) {
                         </p>
                     </div>
                 </div>
+
                 <div className="work_item">
+                    <div className="work_thumbnail hide_pctab">
+                        <div className="thumbnail_pc "><img src={work7} alt=""/></div>
+                        <div className="thumbnail_sp"><img src={work6} alt=""/></div>
+                        <p><img src={wp} alt="icon"/><img src={html5} alt="icon"/><img src={css3} alt="icon"/><span><img
+                            src={JS} alt="icon"/></span></p>
+                        <a target="_blank" href="https://atelier-sachiko.com/"><span>Visit this page</span></a>
+                    </div>
                     <div className="work_detail h3_right">
                         <h3 className="">Atelier Sachiko | Fleuriste design floral à Paris</h3>
                         <h4><i>Fleuriste indépendante</i></h4>
@@ -84,7 +92,7 @@ function Works(props) {
                             words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
                         </p>
                     </div>
-                    <div className="work_thumbnail">
+                    <div className="work_thumbnail hide_sp ">
                         <div className="thumbnail_pc"><img src={work7} alt=""/></div>
                         <div className="thumbnail_sp"><img src={work6} alt=""/></div>
                         <p><img src={wp} alt="icon"/><img src={html5} alt="icon"/><img src={css3} alt="icon"/><span><img
@@ -92,6 +100,7 @@ function Works(props) {
                         <a target="_blank" href="https://atelier-sachiko.com/"><span>Visit this page</span></a>
                     </div>
                 </div>
+
                 <div className="work_item">
                     <div className="work_thumbnail">
                         <div className="thumbnail_pc"><img src={work3} alt=""/></div>
@@ -120,9 +129,6 @@ function Works(props) {
                             words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
                         </p>
                     </div>
-                </div>
-                <div className="contact_btn">
-                <u><Link to="/contact"><span>G</span>et in Touch</Link></u>
                 </div>
 
             </section>

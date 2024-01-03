@@ -68,7 +68,7 @@ function TopPage(props) {
                     <span>TAKAHIRO</span>
                     <span>YAMADA</span>
                     <span>WEB CREATION</span></h1>
-                <h2 className="top_subt Gruppo">&nbsp;Front-end web developer</h2>
+                <h2 className="top_subt">&nbsp;Front-end web developer</h2>
             </section>
             <section className="top_navi">
                 <ul>

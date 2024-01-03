@@ -1,5 +1,169 @@
-.navi{
-    position: absolute;
+.lockscr {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navi {
+
+}
+
+.navi input {
+    display: none;
+}
+
+.navi label {
+    z-index: 999;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    padding: 8px;
+    transform: translate(0, 0);
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Gruppo', sans-serif;
+    font-weight: normal;
+    border-radius: 6px;
+    color: #F5F5F5FF;
+    background-color: rgba(63, 63, 63, 0.7);
+    backdrop-filter: blur(2px);
+    vertical-align: bottom;
+    transition: 0.2s;
+    width: 33vw;
+    scale: 0.9;
+    box-shadow: 0 0 5px #939393;
+}
+
+button:hover, button:focus, button:active {
+    outline-offset: unset;
+}
+
+
+.navi_container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../asset/wallpaper30.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.3s;
+    scale: 1;
+    opacity: 1;
+}
+
+.navi_container:before {
+    background-color: rgba(39, 42, 47, 0.95);
+    backdrop-filter: blur(4px);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+
+.navi input[type="checkbox"]:checked ~ .navi_container {
+}
+
+.navi_container .navi_page, .navi_container .navi_sns {
+    margin-bottom: 2rem;
+}
+
+.navi_container .navi_page li {
+    font-size: 2rem;
+    padding: 1.6rem 0 4px;
+    line-height: 115%;
+    color: #222;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    transition: 0.2s;
+}
+
+.navi_container .navi_sns {
+    width: 100%;
+    margin-top: 2rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navi_container .navi_sns img {
+    height: 30px;
+    padding: 0.5rem;
+    filter: grayscale(1) brightness(1);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.navi_container span img {
+    height: 30px;
+    filter: grayscale(1) brightness(1) invert(0.2);
+    transition: 0.4s;
+}
+
+.navi_container img:hover {
+    height: 64px;
+    filter: grayscale(0) brightness(1);
+}
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pc {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 480px){
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+
 }

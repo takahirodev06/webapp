@@ -1,4 +1,5 @@
 import "../style/Services.css"
+import "../style/Service_sp.css"
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
 import mainte from "../asset/mainte3.png";
@@ -71,8 +72,20 @@ function Services(props) {
             for (let i = 0; i < chbx.length; i++) {
                 chbx[i].checked = false;
             }
+            const cible = document.querySelector(".srv_marketing");
+            cible.classList.remove("s_m_checking");
+            setradioChecked("");
+        } else if (value === "reset") {
+            const chbx = document.querySelectorAll("input[name='radio_slide']");
+            for (let i = 0; i < chbx.length; i++) {
+                chbx[i].checked = false;
+            }
+            const cible = document.querySelector(".srv_marketing");
+            cible.classList.remove("s_m_checking");
             setradioChecked("");
         } else {
+            const cible = document.querySelector(".srv_marketing");
+            cible.classList.add("s_m_checking");
             setradioChecked(value);
         }
     };
@@ -80,7 +93,7 @@ function Services(props) {
     return (
         <div className="sub_container service_page">
             <h2>Services</h2>
-            <section className="Website">
+            <section className="Website_dev">
                 <h3>Website development</h3>
                 <div className={"srv_development"}>
                     <div className={"srv_dev_hexs hexs_1"}>
@@ -141,18 +154,18 @@ function Services(props) {
                     <Link to="/contact">Contact </Link>
                 </div>
             </section>
-
             <section className="Workflow">
                 <h3>Website Development Workflow</h3>
                 <div className={"srv_workflow"}>
-                    <div className={""}>
+                    <div className={"srv_workflow_step"}>
                         <h4><span>1.</span>Meeting and Needs Assessment</h4>
-                        <p>type something</p>
+                        <p>Purpose, target, budget,current issues?</p>
                     </div>
 
-                    <div className={""}>
-                        <h4><span>2.</span>Proposal, Quotation, and Order Confirmation</h4>
-                        <p>type something</p>
+                    <div className={"srv_workflow_step"}>
+                        <h4><span>2.</span>Proposal, Quotation, and Order Confirmation
+                        </h4>
+                        <p>Launch our new project</p>
 
                         {/*
                         <p>Based on the information gathered during the needs assessment, we will conduct an analysis of
@@ -162,29 +175,28 @@ function Services(props) {
                         <p>When requesting our services, we will exchange order confirmation documents. (Production
                             costs will be invoiced for payment after delivery.)</p>  */}
                     </div>
-                    <div className={""}>
+                    <div className={"srv_workflow_step"}>
                         <h4><span>3.</span>Structure and Wireframe</h4>
-                        <p>type something</p>
+                        <p>Design UI / UX to achieve your marketing goal</p>
 
                         {/*<p>During this stage, we will prepare materials such as photos and text for inclusion and finalize   the  content. We will also determine the specifications for the website.</p>*/}
                     </div>
-                    <div className={""}>
+                    <div className={"srv_workflow_step"}>
                         <h4><span>4.</span>Design</h4>
-                        <p>type something</p>
+                        <p>Make site visual attractive, clean and touchable</p>
 
                         {/*<p>We will translate the wireframe into a finalized design.</p>*/}
                     </div>
-                    <div className={""}>
+                    <div className={"srv_workflow_step"}>
                         <h4><span>5.</span>Coding</h4>
-                        <p>type something</p>
-
+                        <p>Build system rapid, stable and secured</p>
                         {/*<p>Based on the approved design and specifications, we will construct the website in a testing*/}
                         {/*    environment. Interactive elements such as slideshows will be developed during this*/}
                         {/*    stage.</p>*/}
                     </div>
-                    <div className={""}>
-                        <h4><span>6.</span>Testing, Revisions, and Delivery on the Test Site</h4>
-                        <p>type something</p>
+                    <div className={"srv_workflow_step"}>
+                        <h4><span>6.</span>Test,review and publish </h4>
+                        <p>Release new /redesigned site for the whole world safely.</p>
 
                         {/*<p>You will review the appearance and functionality in the testing environment. Upon completion,*/}
                         {/*    the*/}
@@ -197,10 +209,8 @@ function Services(props) {
                     <Link to="/contact">Contact </Link>
                 </div>
             </section>
-
-            <section className="webMarketing">
+            <section className="webMarketing" id={"webMarketing"}>
                 <h3>Web Marketing Support</h3>
-
                 <div className={"srv_marketing"}>
                     <div className="srv_marketing_switch">
                         <div className={"srv_marketing_item"}>
@@ -215,8 +225,9 @@ function Services(props) {
                             <label htmlFor="radio_slide2"><span></span></label>
 
                         </div>
-                        <div className={"srv_marketing_item"}><input type="radio" id={"radio_slide3"} name='radio_slide'
-                                                                     onClick={() => handleRadio("Strategy")}/>
+                        <div className={"srv_marketing_item"}>
+                            <input type="radio" id={"radio_slide3"} name='radio_slide'
+                                   onClick={() => handleRadio("Strategy")}/>
                             <label htmlFor="radio_slide3"> <span></span></label>
 
                         </div>
@@ -236,11 +247,8 @@ function Services(props) {
                             <h4>Track and Analyze Site Data support</h4>
                             <h4>SEO (Search Engine Optimization) support</h4>
                             <h4>Architecture and Web marketing strategy support</h4>
-                            <h4>Paid Advertising support</h4>
+                            <h4>Paid Advertising <br/> support <span></span></h4>
                             <h4>Social Media Marketing Support</h4>
-                            <div className="back_circle2"></div>
-                            <div className="back_circle1"></div>
-                            <div className="back_circle3"></div>
                         </div>}
                         {radioChecked === "Analyze" && <div className="srv_marketing_detail">
                             <h4>Track and Analyze Site Data support</h4>
@@ -256,8 +264,6 @@ function Services(props) {
                             <p> Marketing effectiveness is multiplied by pinpointing the problem areas on your
                                 site. </p>
                             <p> Data collection takes some time. </p>
-
-
                         </div>}
                         {radioChecked === "SEO" && <div className="srv_marketing_detail">
                             <h4>SEO (Search Engine Optimization) support</h4>
@@ -317,12 +323,14 @@ function Services(props) {
                         </div>}
                     </div>
                 </div>
-
-                <div className="srv_dev_contact">
+                <div className="srv_dev_contact s_m_m_back">
+                    {radioChecked !== "" ?
+                        <a href={"#webMarketing"} className={"hide_pc "}
+                           onClick={() => handleRadio("reset")}> &#x3c;&#x3c; </a> : <p></p>}
+                    <p className="hide_pc hide_sp"></p>
                     <Link to="/contact">Contact </Link>
                 </div>
             </section>
-
             <section className="maintenance">
                 <h3>Site operation and maintenance support</h3>
                 <div className="srv_maintenance">
@@ -337,42 +345,43 @@ function Services(props) {
                     <Link to="/contact">Contact </Link>
                 </div>
             </section>
-
-            <section className="values">
+            <section className="Policy-Value">
                 <h3>Our 6 values</h3>
-                <div className="srv_policy srv_p_main">
-                    <div className="srv_p_hex hex0">
+                <div className="srv_policy">
+                    <div className="srv_p_box_center">
                         <p><span>A</span> website is an effective tool for your business. It can help you increase
                             sales, build your brand, showcase your company and your products, solve problems, and
                             communicate with your customers.
-                            But beyond that, We also have a vision that we want to achieve.</p>
+                            But beyond that, we also have a vision that we want to achieve.</p>
                     </div>
-                    <div className="srv_p_hex hex1">
-                        <div className="serv_policy3">
+                    <div className="srv_p_box nth1">
+                        <div className="serv_policy1">
                             <p><span>1.</span>Unlock and maximize the hidden potential of your business</p>
                         </div>
-                        <div className="serv_policy4">
+                        <div className="serv_policy2">
                             <p><span>2.</span>Enabling the advantages of technology to reach every business and user.
                             </p>
                         </div>
                     </div>
-                    <div className="srv_p_hex hex2">
-                        <div className="serv_policy5">
+                    <div className="srv_p_box nth2">
+                        <div className="serv_policy3">
                             <p><span>3.</span>Seamlessly provide users with information through an optimal UI
                                 experience,
                                 free from any stress. </p></div>
-                        <div className="serv_policy6">
+                        <div className="serv_policy4">
                             <p><span>4.</span>Prove that the Web is fun and full of possibilities.</p></div>
                     </div>
-                    <div className="srv_p_hex hex3">
-                        <div className="serv_policy1">
+                    <div className="srv_p_box nth3">
+                        <div className="serv_policy5">
                             <p><span>5.</span>Helping you to love your jobs more</p></div>
-                        <div className="serv_policy2">
+                        <div className="serv_policy6">
                             <p><span>6.</span>An image-building brand for the future era</p></div>
                     </div>
                 </div>
+                <div className="srv_dev_contact">
+                    <Link to="/contact">Contact </Link>
+                </div>
             </section>
-
         </div>
     );
 }

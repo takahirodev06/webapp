@@ -136,6 +136,9 @@ function Contact(props) {
                             {!email && !errors.email && <div className="form_field_lamp">
                                 <div></div>
                             </div>}
+                            {errors.email && !email && <div className="form_field_lamp lamp_error">
+                                <div></div>
+                            </div>}
                             {email && !emailcheck && <div className="form_field_lamp lamp_on">
                                 <div></div>
                             </div>}

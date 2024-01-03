@@ -1,0 +1,92 @@
+.notfound {
+    min-height: 80vh;
+    text-align: center;
+}
+
+.notfound h1 {
+    font-size: 3rem;
+    font-family: 'Zen Dots', sans-serif;
+    font-weight: normal;
+}
+
+.notfound p {
+    font-family: 'Zen Dots', sans-serif;
+    margin-top: 24px;
+}
+
+.notfound p span {
+    font-family: 'Shippori Mincho', serif;
+}
+
+.notfound a {
+    margin: 32px auto;
+    padding: 0.5rem 2rem;
+    max-width: 500px;
+    font-size: 3rem;
+    font-weight: normal;
+    border-bottom: 1px solid #ffffff;
+}
+
+.notfound h1:hover, .notfound p:hover, .notfound a:hover {
+    color: #4dff50;
+}
+
+.notfound a:hover {
+    border-bottom: 1px solid #4dff50;
+}
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pc {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 480px){
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+    .notfound {
+        max-width: 370px;
+    }
+}

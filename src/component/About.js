@@ -4,12 +4,12 @@ import React, {useEffect} from "react";
 import portait from "../asset/takahiro.jpg"
 import {Link} from "react-router-dom";
 
-import sns01 from "../asset/github.png";
-import sns02 from "../asset/gitlab.png";
-import sns03 from "../asset/gmail.png";
-import sns04 from "../asset/insta.png";
+import sns01 from "../asset/GH3.png";
+import sns02 from "../asset/GL.png";
+import sns03 from "../asset/GM.png";
+import sns04 from "../asset/IS.png";
 import sns05 from "../asset/linkdin.webp";
-import sns06 from "../asset/xicongray.png";
+import sns06 from "../asset/TX.png";
 
 
 function About(props) {
@@ -33,31 +33,23 @@ function About(props) {
                     <span className="about_txtjp">山田 隆広</span> <br/>
                     <span className="Gruppo">Takahiro YAMADA</span>
                 </h3>
-
                 <h4 className="Gruppo">Front-end web developer</h4>
-
                 <div>
-                    <p> born in 1995 in Nagoya, Japan.</p>
+                    <p> Born in 1995 in Nagoya, Japan.</p>
                     <br/>
-                    <p> During a language stay in France while studying international relations, I fell in love with
-                        this
-                        country and decided to move there. I left university and followed a javascript training in
-                        Paris,
-                        where I now work as a freelancer.
+                    <p><span>D</span>uring a language stay in France while studying international relations, I fell in
+                        love with this country and decided to move there. I left university and followed a javascript
+                        training in, Paris, where I now work as a freelancer.
                     </p>
-                    <p>
-                        I am currently looking for a job.
-                    </p>
+                    <p> I am currently looking for a job. </p>
                 </div>
 
                 <div>
-                    <p>I am a curious person, who likes to learn new skills related to the web: graphic design, UI
-                        design,
-                        web marketing, etc. I put them into practice in my web projects. I am currently learning
-                        Photoshop
-                        and After Effects.
+                    <p><span>I</span> am a curious person, who likes to learn new skills related to the web: graphic design, UI
+                        design, web marketing, etc. I put them into practice in my web projects. I am currently learning
+                        Photoshop and After Effects.
                     </p>
-                    <p> My hobbies are varied: internet in general, community management, reading magazines rugby,
+                    <p> <span>M</span>y hobbies are varied: internet in general, community management, reading magazines rugby,
                         breakdance, international cooking.
                     </p>
                 </div>
@@ -66,17 +58,20 @@ function About(props) {
             </div>
         </section>
         <div className={"about_sns"}>
-            <p>
-                <span><img src={sns06} alt="sns"/></span>
-                <span><img src={sns04} alt="sns"/></span>
-                <span><img src={sns05} alt="sns"/></span>
-                <img src={sns01} alt="sns"/>
-                <img src={sns02} alt="sns"/>
-                <img src={sns03} alt="sns"/>
-            </p>
-        </div>
-        <div className="contact_btn">
-            <u><Link to="/contact"><span>G</span>et in Touch</Link></u>
+            <a href="https://github.com/takahirodev06" target={"_blank"}>
+                <span><img src={sns01} alt="github"/></span>
+            </a>
+            <a href="https://gitlab.com/Takahi" target={"_blank"}>
+                <img src={sns02} alt="gitlab"/> </a>
+            <a href="https://twitter.com/mr_increment" target={"_blank"}>
+                <span><img src={sns06} alt="x"/></span>
+            </a>
+            <a href="https://www.instagram.com/" target={"_blank"}>
+                <img src={sns04} alt="instagram"/></a>
+            <a href="https://www.linkedin.com/in/takahiro-y-551a1918b/" target={"_blank"}>
+                <img src={sns05} alt="Linkd in"/> </a>
+            <a href="mailto:takahirodev06@gmail.com">
+                <img src={sns03} alt="gmail"/> </a>
         </div>
     </div>)
 

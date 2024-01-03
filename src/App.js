@@ -22,21 +22,26 @@ function App() {
     const [loadtimer, setLoadtimer] = useState(false);
 
 
-    setTimeout(() => setLoadtimer(true), 2500);
+    setInterval(() => setLoadtimer(true)
+        , 2500);
+
     window.onload = function () {
-        setIsLoading(true)
+        setIsLoading(true);
     }
 
     const location = useLocation();
 
+
     useEffect(() => {
         console.log(location.pathname);
+        console.log("isLoading :  " + isLoading);
+        console.log("loadtimer :  " + loadtimer);
     },);
 
     return (
-        <div className="App">
+        <div className="App" onLoad={() => setIsLoading(true)}>
             <div id="top"></div>
-            <Header/>
+
             <main>
                 <Routes>
                     <Route path="/" element={isLoading && loadtimer ? <TopPage/> : <Loading/>}/>
@@ -50,9 +55,12 @@ function App() {
                     <Route path="/*" element={<NotFound/>}/>
                 </Routes>
             </main>
-            <Sidebar/>
-            {location.pathname !== "/contact" && <Sidebutton/>}
             <Footer/>
+
+            {loadtimer && <Sidebar/>}
+            {loadtimer && location.pathname !== "/contact" && <Sidebutton/>}
+            {loadtimer && <Navi/>}
+            <Header/>
         </div>)
 }
 

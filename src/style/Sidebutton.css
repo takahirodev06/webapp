@@ -12,7 +12,7 @@
     font-size: 2rem;
     font-family: 'Gruppo', sans-serif;
     font-weight: normal;
-    padding: 8px 24px 8px 32px;
+    padding: 8px 24px;
     border-radius: 6px;
     color: #0a1929;
     vertical-align: bottom;
@@ -36,7 +36,7 @@
 
 .sidebutton_container a img {
     height: 28px;
-    padding: 0 12px;
+    margin-left: 12px;
     vertical-align: bottom;
     filter: invert(0.7);
     rotate: 90deg;
@@ -60,4 +60,128 @@
 
 .sidebutton_container a:hover img {
     filter: invert(1) brightness(1);
+}
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pc {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+
+    .sidebutton_container {
+        position: fixed;
+        top: unset;
+        bottom: 16px;
+        right: 0;
+        transform: translate(0, 0);
+        text-align: center;
+        width: 70vw;
+        scale: 0.9;
+        box-sizing: border-box;
+    }
+
+    .sidebutton_container a {
+        position: relative;
+        display: block;
+        font-size: 2rem;
+        font-family: 'Gruppo', sans-serif;
+        font-weight: normal;
+        border-radius: 6px;
+        color: #0a1929;
+        background-color: rgba(245, 245, 245, 0.8);
+        backdrop-filter: blur(2px);
+        vertical-align: bottom;
+        transition: 0.2s;
+        rotate: 0deg;
+
+    }
+
+    .sidebutton_container a:before {
+        display: none;
+    }
+
+    .sidebutton_container a img {
+        rotate: 0deg;
+    }
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+
+    .sidebutton_container {
+        position: fixed;
+        top: unset;
+        bottom: 16px;
+        right: 0;
+        transform: translate(0, 0);
+        text-align: center;
+        width: 70vw;
+        scale: 0.9;
+        box-sizing: border-box;
+
+    }
+
+    .sidebutton_container a {
+        position: relative;
+        display: block;
+        font-size: 2rem;
+        font-family: 'Gruppo', sans-serif;
+        font-weight: normal;
+        border-radius: 6px;
+        color: #0a1929;
+        background-color: rgba(245, 245, 245, 0.9);
+        vertical-align: bottom;
+        transition: 0.2s;
+        rotate: 0deg;
+
+    }
+
+    .sidebutton_container a:before {
+        display: none;
+    }
+
+    .sidebutton_container a img {
+        rotate: 0deg;
+    }
 }

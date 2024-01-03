@@ -22,12 +22,70 @@
 }
 
 .sidebar_container span img {
-    height: 40px;
     filter: grayscale(1) brightness(1) invert(0.2);
-    transition: 0.4s;
 }
 
 .sidebar_container img:hover {
     height: 64px;
     filter: grayscale(0) brightness(1);
+}
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pc {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+
+    .sidebar_container {
+        display: none;
+    }
+
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pc {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+    .sidebar_container {
+        display: none;
+    }
 }

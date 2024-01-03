@@ -1,5 +1,5 @@
 .work_box {
-    padding: 6rem 3rem;
+    padding: 1rem 3rem;
 }
 
 .work_box:after {
@@ -17,6 +17,7 @@
 }
 
 .thumbnail_pc {
+    border-radius: 4px;
     height: 260px;
     width: 80%;
 }
@@ -55,7 +56,7 @@
 .work_thumbnail p img {
     height: 32px;
     padding: 16px 8px;
-    filter: grayscale(1);
+    filter: brightness(1);
 }
 
 .work_thumbnail a {
@@ -99,7 +100,7 @@
 }
 
 .work_detail h4 u {
-    color: #dc143c;
+    color: #ff4f73;
 }
 
 .work_detail p {
@@ -112,4 +113,184 @@
 
 .work_detail a {
     color: white;
+}
+
+/*--- PC /tab / SP ------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1025px) {
+    .hide_pctab {
+        display: none;
+    }
+
+    .hide_tab {
+        display: block;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 480px) {
+
+    .hide_pctab {
+        display: none;
+    }
+
+    .hide_tab {
+        display: none;
+    }
+
+    .hide_sp {
+        display: block;
+    }
+
+    .work_detail p {
+        display: inline-block;
+        width: 95%;
+        margin-right: 5%;
+        margin-bottom: 1rem;
+        vertical-align: top;
+        font-size: 1.1rem;
+    }
+}
+
+/* sp */
+
+@media screen and (max-width: 480px) {
+
+    .hide_pctab {
+        display: block;
+    }
+
+    .hide_tab {
+        display: block;
+
+    }
+
+    .hide_sp {
+        display: none;
+    }
+
+    .work_box {
+        padding: 0 1rem;
+    }
+
+    .work_box:after {
+        transform: translate(-50%, -50%) rotate(1deg);
+    }
+
+    .work_item {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 128px;
+    }
+
+    .work_thumbnail {
+        width: 100%;
+    }
+
+    .thumbnail_pc {
+        border-radius: 4px;
+        height: 260px;
+        width: 80%;
+    }
+
+    .thumbnail_sp {
+        border-radius: 10px;
+        height: 200px;
+        margin-left: 5%;
+        width: 15%;
+    }
+
+    .thumbnail_pc, .thumbnail_sp {
+        box-sizing: border-box;
+        border: 2px solid #222222;
+        box-shadow: 5px 5px 5px rgba(34, 34, 34, 0.66);
+        overflow-y: scroll;
+        display: inline-block;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .thumbnail_pc::-webkit-scrollbar,
+    .thumbnail_sp::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .thumbnail_sp img, .thumbnail_pc img {
+        width: 100%;
+    }
+
+    .work_thumbnail p {
+        text-align: right;
+    }
+
+    .work_thumbnail p img {
+        height: 32px;
+        padding: 16px 4px;
+        filter: brightness(1);
+    }
+
+    .work_thumbnail a {
+        display: block;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .work_thumbnail a span {
+        display: block;
+        padding: 16px 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-image: url("../asset/wallpaper2.jpg");
+        background-attachment: fixed;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 10px 5px 5px rgba(34, 34, 34, 0.66);
+    }
+
+
+    .work_detail {
+        width: 100%;
+    }
+
+    .work_detail h3 {
+        margin: 24px 0;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-family: 'Vollkorn', serif;
+    }
+
+    .h3_right h3, .h3_right h4 {
+        text-align: left;
+    }
+
+    .work_detail h4 {
+        margin: 8px 0 24px;
+        font-weight: normal;
+        font-size: 1.2rem;
+        color: #797979;
+    }
+
+    .work_detail h4 u {
+        color: #dc143c;
+    }
+
+    .work_detail p {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .work_detail a {
+        color: white;
+    }
+
+
 }

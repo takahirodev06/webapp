@@ -25,6 +25,7 @@ time, mark, audio, video {
     font-size: 100%;
     font-family: "Roboto", sans-serif;
     vertical-align: baseline;
+    transition: 0.2s;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -173,10 +174,9 @@ table {
 
 .contact_btn a, .contact_btn a span {
     font-weight: bold;
-    font-family: 'Parisienne', cursive;
+
     font-size: 4rem;
     color: #ffffff;
-
 }
 
 .contact_btn a span {
@@ -226,42 +226,6 @@ table {
 
 }
 
-.notfound {
-    height: 100vh;
-    text-align: center;
-}
-
-.notfound h1 {
-    font-size: 3rem;
-    font-family: 'Zen Dots', sans-serif;
-    font-weight: normal;
-}
-
-.notfound p {
-    font-family: 'Zen Dots', sans-serif;
-    margin-top: 24px;
-}
-
-.notfound p span {
-    font-family: 'Shippori Mincho', serif;
-}
-
-.notfound a {
-    margin: 32px auto;
-    padding: 0.5rem 2rem;
-    max-width: 500px;
-    font-size: 3rem;
-    font-weight: normal;
-    border-bottom: 1px solid #ffffff;
-}
-
-.notfound h1:hover, .notfound p:hover ,.notfound a:hover {
-    color: #4dff50;
-}
-
-.notfound a:hover {
-    border-bottom: 1px solid #4dff50;
-}
 
 /*--- ------------------------------------------------------------------------------*/
 
@@ -298,9 +262,11 @@ table {
     }
 
     .sub_container {
-        background-color: #658550;
-        padding: 8rem 12% 4rem 14%;
-        animation: fade_in 0.4s forwards;
+        padding: 6rem 3rem;
+    }
+
+    .sub_container h2 {
+        font-size: 2.4rem;
     }
 }
 
@@ -322,9 +288,30 @@ table {
     }
 
     .sub_container {
-        background-color: #9a707c;
-        padding: 8rem 8px 4rem;
-        animation: fade_in 0.4s forwards;
+        padding: 6rem 1rem;
+    }
+
+    .sub_container h2 {
+        font-size: 2.4rem;
+    }
+
+
+    .contact_btn {
+        margin: 8rem 0 4rem;
+        text-align: center;
+        rotate: -6deg;
+    }
+
+    .contact_btn a, .contact_btn a span {
+        font-weight: bold;
+        font-family: 'Gruppo', cursive;
+        font-size: 2rem;
+        color: #ffffff;
+    }
+
+    .contact_btn a span {
+        font-weight: normal;
+        font-size: 4rem;
     }
 }
 
