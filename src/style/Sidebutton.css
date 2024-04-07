@@ -2,7 +2,6 @@
     position: fixed;
     top: 50%;
     right: 0;
-    transform: translate(20%, -50%);
 }
 
 .sidebutton_container a {
@@ -41,7 +40,22 @@
     filter: invert(0.7);
     rotate: 90deg;
     transition: 0.2s;
+}
 
+.sidebutton_container a:not(:hover) {
+    animation: lghitshadow 3s linear infinite;
+}
+
+@keyframes lghitshadow {
+    0% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0);
+    }
+    50% {
+        box-shadow: 0 0 30px #ffffff, 0 0 10px #ffffff;
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0);
+    }
 }
 
 
@@ -76,6 +90,23 @@
     .hide_sp {
         display: block;
     }
+
+    .sidebutton_container {
+        animation: 0.5s fade_in_right_b forwards;
+    }
+
+    @keyframes fade_in_right_b {
+        0% {
+            opacity: 0;
+            transform: translate(50%, -50%);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(20%, -50%);
+        }
+    }
+
+
 }
 
 /* tab */

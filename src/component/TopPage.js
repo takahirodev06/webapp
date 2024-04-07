@@ -4,8 +4,6 @@ import * as PropTypes from "prop-types";
 import {useEffect, useState} from "react";
 
 
-
-
 function Helmet(props) {
     return null;
 }
@@ -14,6 +12,7 @@ function TopPage(props) {
 
     useEffect(() => {
         document.title = 'TAKAHIRO YAMADA WEB CREATION';
+        document.querySelector('meta[name="description"]').setAttribute("content", "Porfolio de Takahiro Yamada. Développeur Web Front-end  Spécialiste de React App, React Native, AngularJS, JavaScript, TypeScript. Production de sites web, renouvellement et rebranding disponibles.");
         window.scroll({
             top: 0,
             // behavior: "smooth",
@@ -73,22 +72,22 @@ function TopPage(props) {
             <section className="top_navi">
                 <ul>
                     <Link to="/">
-                        <li>Home</li>
+                        <li className={""}>Accueil</li>
                     </Link>
                     <Link to="/services">
-                        <li>Services</li>
+                        <li className={""}>Services</li>
                     </Link>
                     <Link to="/works">
-                        <li>Works</li>
+                        <li className={""}>Projets</li>
                     </Link>
                     <Link to="/about">
-                        <li>About</li>
+                        <li className={""}>A propos</li>
                     </Link>
-                    <Link to="/blog">
-                        <li>Blog</li>
-                    </Link>
+                    {/*<Link to="/blog">*/}
+                    {/*    <li>Blog</li>*/}
+                    {/*</Link>*/}
                     <Link to="/contact">
-                        <li>Contact</li>
+                        <li className={""}>Contact</li>
                     </Link>
                 </ul>
             </section>

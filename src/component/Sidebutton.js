@@ -12,7 +12,6 @@ function Sidebutton(props) {
     const [offset, setOffset] = useState(0);
 
     useEffect(() => {
-        document.title = 'TAKAHIRO YAMADA WEB CREATION';
         window.scroll({
             top: 0,
             behavior: "smooth",

@@ -43,7 +43,7 @@ function Sidebar(props) {
                 <li><a href="https://twitter.com/mr_increment" target={"_blank"}>
                     <span><img src={sns06} alt="x"/></span>
                 </a></li>
-                <li><a href="https://www.instagram.com/" target={"_blank"}>
+                <li><a href="https://www.instagram.com/yamada_web_creation/" target={"_blank"}>
                     <img src={sns04} alt="instagram"/></a></li>
                 <li><a href="https://www.linkedin.com/in/takahiro-y-551a1918b/" target={"_blank"}>
                     <img src={sns05} alt="Linkd in"/> </a></li>

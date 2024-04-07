@@ -10,29 +10,27 @@ function Header(props) {
             </div>
             <nav className="header_navi">
                 <ul className="">
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/">Accueil</Link></li>
                     <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/works">Works</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/works">Projets</Link></li>
+                    <li><Link to="/about">A propos</Link></li>
+                    {/*<li><Link to="/blog">Blog</Link></li>*/}
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
             <div className="header_lang">
-                <Link rel={"alternate"} to="/">fr</Link> /
-                <Link rel={"alternate"} to="/">en</Link> /
-                <Link rel={"alternate"} to="/">jp</Link>
+                <Link rel={"alternate"} to="/" className={"header_active_L"}>fr</Link> /
+                <Link rel={"alternate"} to="/en">en</Link> /
+                <Link rel={"alternate"} to="/jp" >jp</Link>
             </div>
             <div className="header_dark">
-                <input id="header_dark_toggle" type="checkbox" className="check"/>
-                <label className="slide" htmlFor="header_dark_toggle">
-                    <label className="toggle" htmlFor="checkbox_toggle"></label>
-                    <label className="text" htmlFor="checkbox_toggle">Light</label>
-                    <label className="text" htmlFor="checkbox_toggle">Dark</label>
+                <label htmlFor="theme" className="theme">
+                    <input id="theme" className="theme__toggle" type="checkbox" role="switch" name="theme"
+                           value="dark"/>
                 </label>
             </div>
         </header>
-    );
+    )
 }
 
 export default Header;

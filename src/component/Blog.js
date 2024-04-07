@@ -13,9 +13,9 @@ function Blog(props) {
 
     return (
         <div className="sub_container">
+            <p className={"blog_box_prep"}> in PREPARATION</p>
             <h2>Blog</h2>
             <section className={"blog_box"}>
-                <p className={"blog_box_prep"}> in PREPARATION</p>
                 <div className={"blog_item"}>
                     <h3 className={"blog_title"}>[Best-of 2023] Les meilleures opérations "food"</h3>
                     <p className={"blog_discrp"}>texttexttext</p>

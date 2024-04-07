@@ -2,7 +2,8 @@ import "../style/Contact.css"
 import React, {useEffect, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import {useForm} from "react-hook-form";
-import copy from "../asset/copy.png"
+import copy from "../asset/copy.png";
+import arrowyellow from "../asset/Polygon 1.png";
 import {Link} from "react-router-dom";
 
 function Contact(props) {
@@ -82,25 +83,25 @@ function Contact(props) {
 
     return (
         <div className="sub_container">
-            <h2>Contact</h2>
+            <h2 className={""}>Contact</h2>
             <section className="contact_address">
-                <p>Please contact me through this email.</p>
+                <p>Consultez-moi par courrier électronique ci-dessous.</p>
                 <h3>
                     takahirodev06@gmail.com
                     {copyTocb ? <img src={copy} alt="copy" onClick={copytocilpbord}
                                      className={"filtegreen"}/>
                         : <img src={copy} alt="copy" onClick={copytocilpbord}
                                className={"filterwhite"}/>}
-                    {copyTocb ? <span onClick={copytocilpbord}>Copied!</span> :
-                        <span onClick={copytocilpbord}>Click to copy</span>}
+                    {copyTocb ? <span onClick={copytocilpbord}>Copié!</span> :
+                        <span onClick={copytocilpbord}>Cliquez pour copier</span>}
                 </h3>
             </section>
             <section className="contact_form">
                 <form onSubmit={handleSubmit(onSubmit)} method="post" ref={form} id={"form_area"}>
                     <div className={"form_sending"}>
-                        <p>Get in touch </p>
+                        <p>Prendre contact </p>
                         <div className={"form_field_item"}>
-                            <input type="text" placeholder="Company"
+                            <input type="text" placeholder="Société"
                                    value={company} {...register('company', {required: true})}
                                    onChange={handleCompanyChange}/>
                             {company && <div className="form_field_lamp lamp_on">
@@ -112,10 +113,10 @@ function Contact(props) {
                             {errors.company && !company && <div className="form_field_lamp lamp_error">
                                 <div></div>
                             </div>}
-                            {errors.company && <p className="form_alert">* required field</p>}
+                            {errors.company && <p className="form_alert">* champ requis</p>}
                         </div>
                         <div className={"form_field_item"}>
-                            <input type="text" placeholder="Name"
+                            <input type="text" placeholder="Votre nom"
                                    value={name} {...register('name', {required: true})}
                                    onChange={handleNameChange}/>
                             {name && <div className="form_field_lamp lamp_on">
@@ -127,7 +128,7 @@ function Contact(props) {
                             {errors.name && !name && <div className="form_field_lamp lamp_error">
                                 <div></div>
                             </div>}
-                            {errors.name && <p className="form_alert">* required field</p>}
+                            {errors.name && <p className="form_alert">* champ requis</p>}
                         </div>
                         <div className={"form_field_item"}>
                             <input type="email" placeholder="your_email@address.com" className="width100"
@@ -145,12 +146,12 @@ function Contact(props) {
                             {email && emailcheck && <div className="form_field_lamp lamp_error">
                                 <div></div>
                             </div>}
-                            {errors.email && <p className="form_alert">* required field</p>}
+                            {errors.email && <p className="form_alert">* champ requis</p>}
                             {!errors.email && emailcheck &&
-                                <p className="form_alert">* address email is not validated</p>}
+                                <p className="form_alert">* L'adresse email n'est pas valide.</p>}
                         </div>
                         <div className={"form_field_item"}>
-                            <textarea placeholder="Enter message" className={"width100"}
+                            <textarea placeholder="Ecrivez ici." className={"width100"}
                                       value={message} {...register('message', {required: true})}
                                       onChange={handleMessageChange}/>
                             {message && <div className="form_field_lamp lamp_on">
@@ -162,16 +163,17 @@ function Contact(props) {
                             {errors.message && !message && <div className="form_field_lamp lamp_error">
                                 <div></div>
                             </div>}
-                            {errors.message && <p className="form_alert">* required field</p>}
+                            {errors.message && <p className="form_alert">* champ requis</p>}
                         </div>
                         <div className={"form_switch"}>
-                            <button type="submit" value="" disabled={!submit}>Send</button>
+                            <button type="submit" value="" disabled={!submit}>Envoyer</button>
+                            <img src={arrowyellow} alt="" className={"arrowyellow"}/>
                         </div>
                     </div>
                     <div className={"form_is_send"}>
-                        <p>Your message was sent successfully! </p>
+                    <p>Votre message a été envoyé avec succès!</p>
                         <div className={"form_switch"}>
-                            <Link to="/">Home</Link>
+                            <Link to="/">Accueil</Link>
                         </div>
                     </div>
                 </form>

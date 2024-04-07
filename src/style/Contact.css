@@ -19,6 +19,10 @@
     font-family: 'Gruppo', sans-serif;
 }
 
+.contact_address span {
+    font-family: 'Gruppo', sans-serif;
+}
+
 .contact_address h3 {
     font-size: 3rem;
     position: relative;
@@ -28,24 +32,24 @@
 .contact_address h3 img {
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    right: 25px;
+    transform: translate(50%, -50%);
     height: 50px;
 }
 
 .contact_address h3 span {
     position: absolute;
     top: 50%;
-    right: -25px;
-    transform: translateY(-50%);
-    width: 100px;
+    right: 25px;
+    transform: translate(50%, -50%);
     text-align: center;
     font-size: 1rem;
+    white-space: nowrap;
     cursor: default;
 }
 
 .contact_address .filterwhite {
-    filter: invert(1);
+    filter: invert(0.8);
 }
 
 .contact_address .filtegreen {
@@ -67,6 +71,12 @@
 .contact_form #form_area .form_sending,
 .contact_form #form_area .form_is_send {
     width: 50%;
+    text-align: center;
+}
+
+.contact_form #form_area .form_sending p {
+    width: 50%;
+    text-align: left;
 }
 
 .form_send_message {
@@ -164,32 +174,56 @@
 }
 
 .form_switch {
+    position: relative;
+    display: inline-block;
     text-align: center;
     margin: 1rem 0 1.5rem;
 }
+
 
 .form_switch button,
 .form_switch a {
     position: relative;
     margin: 0 auto;
     padding: 1rem 9rem;
-    font-size: 1.4rem;
-    border-radius: 1rem;
+    border-radius: 22rem;
     border: none;
     text-align: center;
-    color: white;
-    text-shadow: 0 0 30px #022c8c, 0 0 15px #022c8c, 0 0 5px #022c8c;
+    font-family: 'Gruppo', sans-serif;
     font-weight: bold;
-    opacity: 1;
-    background-image: url("../asset/wallpaper30.jpg");
-    background-size: cover;
-    animation: app-bg-anime 3s infinite;
+    font-size: 1.4rem;
+}
+
+
+.arrowyellow {
+    top: -14px;
+    left: -72px;
+    position: absolute;
+    color: #f9ff3f;
+    text-shadow: 0 0 10px;
+    font-size: 60px;
+    animation: tenmetsu 1s linear infinite;
+}
+
+@keyframes tenmetsu {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        left: -80px;
+        opacity: 0.3;
+    }
 }
 
 .form_switch button:disabled {
-    text-shadow: 0 0 30px #000000, 0 0 15px #000000, 0 0 5px #000000;
-    filter: grayscale(1);
-    animation: unset;
+    color: #b6b6b6
+}
+
+.form_switch button:disabled + .arrowyellow {
+    display: none;
 }
 
 
@@ -246,6 +280,24 @@
 
 }
 
+.jp .contact_address span, .contact_form span,
+.jp .contact_form button,
+.jp .contact_form input,
+.jp .contact_form textarea {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+}
+
+.form_alert span {
+    font-size: 1rem;
+}
+
+.jp .form_field_item input::placeholder,
+.jp .form_field_item textarea::placeholder {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.4);
+}
 
 /*--- PC /tab / SP ------------------------------------------------------------------------------*/
 /* pc */
@@ -327,7 +379,6 @@
 }
 
 /* sp */
-
 @media screen and (max-width: 480px) {
 
     .hide_pc {
@@ -403,15 +454,47 @@
         border-radius: 50%;
     }
 
+    .contact_form #form_area .form_sending p {
+        width: 100%;
+        text-align: left;
+    }
+
     .form_is_send p {
         margin: 2rem 0 6rem;
         font-size: 2rem;
     }
 
+    .form_switch {
+        margin-top: 2rem;
+    }
+
     .form_switch button,
     .form_switch a {
         padding: 1rem 6rem;
-
     }
 
+    .arrowyellow {
+        top: -52px;
+        left: 50%;
+        height: 4rem;
+        position: absolute;
+        color: #f9ff3f;
+        text-shadow: 0 0 10px;
+        font-size: 32px;
+        animation: tenmetsu_sp 1s linear infinite;
+        transform: rotate(90deg) translateY(50%);
+    }
+
+    @keyframes tenmetsu_sp {
+        0% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            top: -60px;
+            opacity: 0.3;
+        }
+    }
 }

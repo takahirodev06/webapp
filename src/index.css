@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&family=Zen+Antique&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Kaushan+Script&family=Parisienne&family=Zen+Dots&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Shippori+Mincho+B1&family=Yuji+Mai&family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&family=Shippori+Mincho&family=Shippori+Mincho+B1&family=Yuji+Mai&family=Zen+Antique&display=swap');
+
 
 /*--- Reset css ------------------------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
@@ -25,7 +27,6 @@ time, mark, audio, video {
     font-size: 100%;
     font-family: "Roboto", sans-serif;
     vertical-align: baseline;
-    transition: 0.2s;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -35,11 +36,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+    position: relative;
     line-height: 1;
     background: rgb(65, 65, 65);
     background: radial-gradient(circle, rgb(65, 65, 65) 0%, rgb(34, 34, 34) 100%);
     color: #ffffff;
-
 }
 
 ol, ul {
@@ -124,6 +125,38 @@ table {
     font-family: 'Shippori Mincho', serif;
 }
 
+.NotoSans {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+@font-face {
+    font-family: 'ethnocentric';
+    src: url('asset/ethnocentric rg it.otf') format('truetype');
+}
+
+.ethnocentric {
+    font-family: 'ethnocentric', serif;
+
+}
+
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('asset/Cocogoose-Classic-Medium-trial.ttf') format('truetype');
+}
+
+.Cocogoose {
+    font-family: 'Cocogoose', serif;
+
+}
+
+@font-face {
+    font-family: 'PetrovSans';
+    src: url('asset/PetrovSans-Regular.ttf') format('truetype');
+}
+
+.PetrovSans {
+    font-family: 'PetrovSans', serif;
+}
 
 /*--- sub pages------------------------------------------------------------------------------*/
 .top_container {
@@ -158,12 +191,36 @@ table {
 }
 
 .sub_container h2 {
+    font-family: 'PetrovSans', serif;
+    position: relative;
+    margin-bottom: 2rem;
     font-size: 4rem;
     line-height: 130%;
     color: #222;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff,
     -1px 0 0 #fff, 1px 0 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff;
-    margin-bottom: 2rem;
+}
+
+.sub_container h2 span {
+    position: relative;
+    padding-left: 32px;
+    font-size: 1.2rem;
+    line-height: 100%;
+    text-shadow: none;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+    vertical-align: middle;
+}
+
+.sub_container h2 span:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    height: 1px;
+    width: 16px;
+    background-color: white;
 }
 
 .contact_btn {
@@ -174,7 +231,6 @@ table {
 
 .contact_btn a, .contact_btn a span {
     font-weight: bold;
-
     font-size: 4rem;
     color: #ffffff;
 }
@@ -184,6 +240,7 @@ table {
     font-size: 10rem;
 }
 
+/*---　rotate css　------------------------------------------------------------------------------*/
 
 .fluidcircle {
     position: absolute;
@@ -192,7 +249,7 @@ table {
     height: 50%;
     width: 300px;
     animation: fluidrotate 5s infinite;
-    border: 1px solid #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 30px #ffffff, inset 0 0 30px #ffffff;
     z-index: -1;
 }
@@ -207,27 +264,80 @@ table {
         border-radius: 40% 60% 54% 35%/49% 60% 40% 51%;
     }
     28% {
-        border-radius: 54% 46% 38% 77%/49% 70% 30% 51%;
+        border-radius: 54% 88% 38% 77%/49% 70% 30% 51%;
     }
     42% {
-        rotate: 127deg;
-
-        border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+        border-radius: 61% 39% 55% 45%/61% 38% 77% 39%;
     }
     56% {
+        rotate: 88deg;
         border-radius: 61% 39% 74% 18%/70% 50% 50% 30%;
     }
     70% {
-        border-radius: 50% 40% 34% 66%/56% 68% 32% 44%;
+        rotate: 96deg;
+        border-radius: 33% 40% 34% 66%/56% 68% 32% 44%;
     }
     84% {
         border-radius: 34% 54% 50% 50%/35% 61% 39% 65%;
     }
+    100% {
+        rotate: 0deg;
+        border-radius: 63% 22% 54% 46%/55% 48% 52% 45%;
+    }
 
 }
 
+.snowflake {
+    position: fixed;
+    top: 100px;
+    width: 3px;
+    height: 10px;
+    box-shadow: 0 0 5px #2cffc6, 0 0 15px #2cffc6;
+    background-color: rgba(44, 255, 198, 0.56);
+    z-index: -1;
+    animation: flow_up linear infinite;
+}
 
-/*--- ------------------------------------------------------------------------------*/
+.snowflake:nth-child(2n) {
+    animation: flow_right linear infinite;
+}
+
+.snowflake:nth-child(3n) {
+    animation: flow_left linear infinite;
+}
+
+@keyframes flow_up {
+    0% {
+        transform: translateY(100vh) translateX(20px) rotate(-5deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-10px) translateX(-10px) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flow_right {
+    0% {
+        transform: translateY(100vh) translateX(20px) rotate(-5deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-10px) translateX(110px) rotate(33deg);
+        opacity: 0.1;
+    }
+}
+
+@keyframes flow_left {
+    0% {
+        transform: translateY(100vh) translateX(20px) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-10px) translateX(-60px) rotate(-30deg);
+        opacity: 0;
+    }
+}
 
 
 /*--- PC /tab / SP ------------------------------------------------------------------------------*/
@@ -267,6 +377,7 @@ table {
 
     .sub_container h2 {
         font-size: 2.4rem;
+        margin-top: 2rem;
     }
 }
 
@@ -293,8 +404,9 @@ table {
 
     .sub_container h2 {
         font-size: 2.4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
-
 
     .contact_btn {
         margin: 8rem 0 4rem;
@@ -314,5 +426,3 @@ table {
         font-size: 4rem;
     }
 }
-
-/*--- ------------------------------------------------------------------------------*/

@@ -28,7 +28,6 @@
 
     .srv_workflow .srv_workflow_step {
         padding-left: 0;
-
     }
 
     .srv_workflow .srv_workflow_step:hover {
@@ -51,6 +50,7 @@
         color: rgba(255, 255, 255, 0.8);
         font-size: 1rem;
     }
+
 
     .srv_workflow .srv_workflow_step:hover h4 {
 
@@ -126,13 +126,13 @@
         animation: fade_in_left 0.2s forwards;
     }
 
-     .s_m_m_back {
+    .s_m_m_back {
         display: flex;
         flex-direction: row;
         gap: 1rem;
     }
 
-    .s_m_m_back .hide_pc,.s_m_m_back p {
+    .s_m_m_back .hide_pc, .s_m_m_back p {
         text-align: left;
         padding: 0.5rem 1rem;
         flex-grow: 1;
@@ -171,14 +171,11 @@
     }
 
     .srv_p_box_center p {
-        font-size: 1.2rem;
-        text-align: center;
-        font-family: 'Gruppo', sans-serif
+
     }
 
     .srv_p_box {
         text-align: center;
-
     }
 
     .srv_p_box div {
@@ -207,16 +204,16 @@
     }
 
     .srv_p_box div p {
-        font-family: 'Gruppo', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         font-size: 1.4rem;
-        line-height: 1.4rem;
+        line-height: 2rem;
         margin-bottom: 0;
     }
 
     .srv_p_box div span {
         color: rgba(255, 255, 255, 0.6);
         font-size: 3rem;
-        font-family: 'Vollkorn', serif;
+        font-family: 'Gruppo', serif;
         display: block;
         margin-bottom: 1rem;
     }

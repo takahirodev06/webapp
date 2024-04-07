@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .sidebar_container img {
@@ -19,6 +20,8 @@
     filter: grayscale(1) brightness(1);
     transition: 0.4s;
     border-radius: 50%;
+    animation: 0.5s fade_in_left forwards;
+
 }
 
 .sidebar_container span img {
@@ -28,6 +31,51 @@
 .sidebar_container img:hover {
     height: 64px;
     filter: grayscale(0) brightness(1);
+}
+
+.sidebar_container:not(:hover) img {
+    animation: snslight 14s linear infinite;
+}
+
+.sidebar_container li:nth-child(2) img {
+    animation-delay: 2s;
+}
+
+.sidebar_container li:nth-child(3) img {
+    animation-delay: 4s;
+}
+
+.sidebar_container li:nth-child(4) img {
+    animation-delay: 6s;
+}
+
+.sidebar_container li:nth-child(5) img {
+    animation-delay: 8s;
+}
+
+.sidebar_container li:nth-child(6) img {
+    animation-delay: 10s;
+}
+
+@keyframes snslight {
+    0% {
+        height: 40px;
+        filter: grayscale(1) brightness(1) invert(0.2);
+    }
+    5% {
+        height: 64px;
+        filter: grayscale(0) brightness(1);
+    }
+    10% {
+        height: 64px;
+        filter: grayscale(0) brightness(1);
+    }
+    15% {
+        height: 40px;
+        filter: grayscale(1) brightness(1) invert(0.2);
+    }
+    100% {
+    }
 }
 
 /*--- PC /tab / SP ------------------------------------------------------------------------------*/

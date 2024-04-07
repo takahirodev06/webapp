@@ -45,7 +45,7 @@
     background-attachment: fixed;
     background-size: 60%;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.2);
     animation: app-bg-anime 2s infinite;
 }
 
@@ -62,7 +62,6 @@
 
 .top_subt {
     font-family: 'Gruppo', sans-serif;
-
     font-size: 3rem;
     text-align: left;
 }
@@ -72,21 +71,43 @@
 }
 
 .top_navi ul li {
+    font-family: 'PetrovSans', serif;
     position: sticky;
     top: 0;
     padding: 2rem 1rem 0;
     margin-bottom: 1rem;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 115%;
     color: #222;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     transition: 0.2s;
+}
 
+.top_navi ul li span {
+    position: relative;
+    padding-left: 40px;
+    font-size: 1.2rem;
+    line-height: 100%;
+    text-shadow: none;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    vertical-align: middle;
+}
+
+.top_navi ul li span:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    height: 1px;
+    width: 16px;
+    background-color: white;
 }
 
 .top_navi ul li:hover {
     border-bottom: 1px solid #fff;
+
 }
 
 /*--- PC /tab / SP ------------------------------------------------------------------------------*/

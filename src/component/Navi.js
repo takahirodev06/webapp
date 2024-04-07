@@ -43,20 +43,20 @@ function Navi(props) {
             {isNavi_on && <div className={"navi_container"} onClick={SetScroll}>
                 <ul className="navi_page">
                     <Link to="/">
-                        <li>Home</li>
+                        <li>Accueil</li>
                     </Link>
                     <Link to="/services">
                         <li>Services</li>
                     </Link>
                     <Link to="/works">
-                        <li>Works</li>
+                        <li>Projets</li>
                     </Link>
                     <Link to="/about">
-                        <li>About</li>
+                        <li>A propos</li>
                     </Link>
-                    <Link to="/blog">
-                        <li>Blog</li>
-                    </Link>
+                    {/*<Link to="/blog">*/}
+                    {/*    <li>Blog</li>*/}
+                    {/*</Link>*/}
                     <Link to="/contact">
                         <li>Contact</li>
                     </Link>
@@ -70,7 +70,7 @@ function Navi(props) {
                     <li><a href="https://twitter.com/mr_increment" target={"_blank"}>
                         <span><img src={sns06} alt="x"/></span>
                     </a></li>
-                    <li><a href="https://www.instagram.com/" target={"_blank"}>
+                    <li><a href="https://www.instagram.com/yamada_web_creation/" target={"_blank"}>
                         <img src={sns04} alt="instagram"/></a></li>
                     <li><a href="https://www.linkedin.com/in/takahiro-y-551a1918b/" target={"_blank"}>
                         <img src={sns05} alt="Linkd in"/> </a></li>
