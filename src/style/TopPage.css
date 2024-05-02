@@ -241,7 +241,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: app-bg-anime 2s infinite;
-    }
+      }
 
     .top_navi {
         padding: 0;

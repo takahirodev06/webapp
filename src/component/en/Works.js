@@ -61,7 +61,7 @@ function Works_En(props) {
                             src={JS} alt="icon"/></span></p>
                     </div>
                     <div className="work_detail">
-                        <h3 className="hide_sp">>Atelier Sachiko | Fleuriste design floral à Paris</h3>
+                        <h3 className="hide_sp">Atelier Sachiko | Fleuriste design floral à Paris</h3>
                         <h4><i>Fleuriste indépendante</i></h4>
                         <h4><a target="_blank"
                                href="https://ateliersachiko.com/"><u> https://ateliersachiko.com</u></a></h4>

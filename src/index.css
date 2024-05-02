@@ -136,7 +136,6 @@ table {
 
 .ethnocentric {
     font-family: 'ethnocentric', serif;
-
 }
 
 @font-face {
@@ -170,8 +169,8 @@ table {
 
 @keyframes fade_in_right {
     0% {
-        opacity: 0;
-        transform: translateX(50%);
+        opacity: 0.2;
+        transform: rotateY(90deg);
     }
     100% {
         opacity: 1;

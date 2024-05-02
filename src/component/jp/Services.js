@@ -130,7 +130,7 @@ function Services_Jp(props) {
                         <div className={"srv_dev_hex"} style={{animationDelay: '0.6s'}}>
                             <h4>スマートフォン <br/> 対応サポート</h4></div>
                         <div className={"srv_dev_hex"} style={{animationDelay: '0.3s'}}>
-                            <p>アクセスの8割を占める<br/>スマートフォンサイト<br/>の制作、最適化。</p>
+                            <p>アクセスの<br/>8割を占める<br/>スマートフォン画面<br/>の制作・最適化。</p>
                             <p></p>
                         </div>
                     </div>

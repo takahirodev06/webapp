@@ -20,7 +20,7 @@ function About_Jp(props) {
         });
     }, []);
 
-    return (<div className="sub_container about_page">
+    return (<div className="sub_container about_page jp">
         <h2>About <span> プロフィール</span></h2>
         <section className={"about_box"}>
             <div className={"about_photo"}>

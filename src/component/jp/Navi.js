@@ -36,9 +36,9 @@ function Navi_Jp(props) {
         <nav className="navi hide_pc jp">
             <input type="checkbox" id={"navi_toggle"} className={"navi_toggle"}/>
             {!isNavi_on ?
-                <label htmlFor="navi_toggle" className={"btn_navi_toggle"} onClick={SetScroll}>Menu{isNavi_on}</label>
+                <label htmlFor="navi_toggle" className={"btn_navi_toggle toggle_lines"} onClick={SetScroll}></label>
                 :
-                <label htmlFor="navi_toggle" className={"btn_navi_toggle"} onClick={SetScroll}>Close</label>
+                <label htmlFor="navi_toggle" className={"btn_navi_toggle toggle_linecross"} onClick={SetScroll}></label>
             }
             {isNavi_on && <div className={"navi_container"} onClick={SetScroll}>
                 <ul className="navi_page">

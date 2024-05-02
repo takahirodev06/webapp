@@ -3,11 +3,6 @@ import {Link} from "react-router-dom";
 import * as PropTypes from "prop-types";
 import {useEffect, useState} from "react";
 
-
-function Helmet(props) {
-    return null;
-}
-
 function TopPage(props) {
 
     useEffect(() => {

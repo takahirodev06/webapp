@@ -14,6 +14,11 @@
         display: none;
     }
 
+    .srv_dev_hexs p {
+        font-size: 4vw;
+    }
+
+
     .service_page section {
         margin-bottom: 10rem;
     }

@@ -34,17 +34,50 @@
     box-shadow: 0 0 5px #939393;
 }
 
+.btn_navi_toggle {
+    height: 48px;
+}
+
+.btn_navi_toggle:before, .btn_navi_toggle:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1.4px;
+    width: 45px;
+    margin-top: -4px;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: 0.2s;
+    transform-origin: center;
+}
+
+.btn_navi_toggle:after {
+    margin-top: 4px;
+}
+
+.toggle_linecross:before {
+    margin: 0;
+    width: 30px;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.toggle_linecross:after {
+    margin: 0;
+    width: 30px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 button:hover, button:focus, button:active {
     outline-offset: unset;
 }
-
 
 .navi_container {
     display: grid;
     justify-content: center;
     align-content: center;
     position: fixed;
-    top: 0;
+    top: 100%;
     left: 0;
     padding: 4rem 1rem;
     box-sizing: border-box;
@@ -57,6 +90,16 @@ button:hover, button:focus, button:active {
     transition: 0.3s;
     scale: 1;
     opacity: 1;
+    animation: fadi-in-bottm 0.1s forwards;
+}
+
+@keyframes fadi-in-bottm {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 .navi_container:before {
@@ -68,8 +111,8 @@ button:hover, button:focus, button:active {
     z-index: -1;
 }
 
-
 .navi input[type="checkbox"]:checked ~ .navi_container {
+
 }
 
 .navi_container .navi_page, .navi_container .navi_sns {
@@ -107,7 +150,6 @@ button:hover, button:focus, button:active {
     width: 16px;
     background-color: white;
 }
-
 
 .navi_container .navi_sns {
     width: 100%;

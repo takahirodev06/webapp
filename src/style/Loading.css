@@ -2,7 +2,42 @@
     min-height: 100vh;
     background-color: #222;
     color: aliceblue;
+    font-size: 2rem;
 }
+
+.loading p {
+    animation: lotatec 2s infinite linear;
+    text-shadow: 0 0 5px #0B62D4,0 0 12px #0B62D4,0 0 30px #0B62D4;
+}
+@keyframes lotatec {
+    0%{filter: hue-rotate(0)}  100%{filter: hue-rotate(360deg)}
+}
+
+.loading span {
+    animation: blink 2s infinite linear;
+    font-family: 'Gruppo', sans-serif;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /*--- PC /tab / SP ------------------------------------------------------------------------------*/
 /* pc */
 @media screen and (min-width: 1025px) {

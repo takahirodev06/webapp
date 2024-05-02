@@ -62,7 +62,7 @@ function App() {
 
 
     useEffect(() => {
-        const numFlakes = 10; // 雪の数
+        const numFlakes = 20; // 雪の数
 
         for (let i = 0; i < numFlakes; i++) {
             createSnowflake();

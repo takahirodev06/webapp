@@ -30,9 +30,10 @@ function Works(props) {
     }, []);
 
 
-    return (<div className="sub_container">
+    return (<div className="sub_container" id={"work"}>
         <h2 className={""}>Projets</h2>
         <section className="works_box">
+
             <div className="work_item">
                 <h3 className="hide_pctab">Hiroki KURODA Site Officiel</h3>
                 <div className="work_thumbnail">
@@ -54,7 +55,8 @@ function Works(props) {
                 </div>
             </div>
 
-            <div className="work_item"><h3 className="hide_pctab">>Atelier Sachiko | Fleuriste design floral à
+            <div className="work_item">
+                <h3 className="hide_pctab">Atelier Sachiko | Fleuriste design floral à
                 Paris</h3>
 
                 <div className="work_thumbnail">
@@ -64,7 +66,7 @@ function Works(props) {
                         src={JS} alt="icon"/></span></p>
                 </div>
                 <div className="work_detail">
-                    <h3 className="hide_sp">>Atelier Sachiko | Fleuriste design floral à Paris</h3>
+                    <h3 className="hide_sp">Atelier Sachiko | Fleuriste design floral à Paris</h3>
                     <h4><i>Fleuriste indépendante</i></h4>
                     <h4><a target="_blank"
                            href="https://ateliersachiko.com/"><u> https://ateliersachiko.com</u></a></h4>
@@ -119,11 +121,12 @@ function Works(props) {
                     <p></p>
                     <p></p>
                     <p></p>
-                    <p><a target="_blank" href="https://atelier-sachiko.com/" className={"visitsite"}><span>Voir cette page</span></a>
+                    <p><a target="_blank" href="http://shiawasenakaigaiseikatsu.com/" className={"visitsite"}><span>Voir cette page</span></a>
                     </p>
 
                 </div>
             </div>
+
         </section>
     </div>);
 }

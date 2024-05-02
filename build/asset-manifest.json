@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.194e54e0.css",
-    "main.js": "/static/js/main.3dc26b70.js",
+    "main.css": "/static/css/main.73196d36.css",
+    "main.js": "/static/js/main.0e322a62.js",
     "static/js/787.ec78c698.chunk.js": "/static/js/787.ec78c698.chunk.js",
     "static/media/0032.webp": "/static/media/0032.ec1ec6bbc2c7ede60b64.webp",
     "static/media/0042.webp": "/static/media/0042.94c482604ffcf058dacf.webp",
@@ -28,15 +28,15 @@
     "static/media/wordpress.png": "/static/media/wordpress.11ed091523e3152b651f.png",
     "static/media/nodejs.svg": "/static/media/nodejs.8b9c2a9425ac2709f4804fa26d7a71ee.svg",
     "static/media/linkdin.webp": "/static/media/linkdin.4c11b4693dd4eebca5be.webp",
+    "index.html": "/index.html",
     "static/media/css3.svg": "/static/media/css3.1b8e9d55a8e9a8d9356e1570e17f206c.svg",
     "static/media/html5.svg": "/static/media/html5.b5265e825e799e9f2c6aa481f270f0fe.svg",
-    "index.html": "/index.html",
-    "main.194e54e0.css.map": "/static/css/main.194e54e0.css.map",
-    "main.3dc26b70.js.map": "/static/js/main.3dc26b70.js.map",
+    "main.73196d36.css.map": "/static/css/main.73196d36.css.map",
+    "main.0e322a62.js.map": "/static/js/main.0e322a62.js.map",
     "787.ec78c698.chunk.js.map": "/static/js/787.ec78c698.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.194e54e0.css",
-    "static/js/main.3dc26b70.js"
+    "static/css/main.73196d36.css",
+    "static/js/main.0e322a62.js"
   ]
 }
